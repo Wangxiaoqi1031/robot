@@ -4,12 +4,12 @@ syms a1 a2 a3 d4 d5 d6 q1 q2 q3 q4 q5 q6 b lx mx nx px ly my ny py lz mz nz pz x
 %D-H parameter
 a1=0.25;a2=0.95;a3=0.3;d4=1.55;d5=0.114;d6=0.123;b=60; 
 %Randomly select a set of joint variables
-q1_i=14.764931;
-q2_i=29.746549;
-q3_i=-45.675415;
-q4_i=71.129843;
-q5_i=-63.797237;
-q6_i=100.49832;
+q1_i=14;
+q2_i=29.7;
+q3_i=-45;
+q4_i=71;
+q5_i=-63;
+q6_i=100;
 %Positive kinematics
 sb=sind(b);
 cb=cosd(b);
@@ -154,7 +154,7 @@ for i=1:length(D)
        eigenvalues(length(eigenvalues)+1)=D(i);
     end
 end
-eigenvalues
+vpa(eigenvalues,8)
 %Joint Angle q1~q6
 for i=1:length(D)
      if isreal(D(i))==1
